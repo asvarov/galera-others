@@ -20,6 +20,7 @@ MYSQL_PASS=$MYSQL_PASS
 MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
 EOF
 
+mkdir -p ./mysql.conf.d
 cat > ./mysql.conf.d/my.cnf <<-EOF
 [server]
 [mysqld]
@@ -40,6 +41,7 @@ bind-address=$MYSQL_HOST
 [mariadb-10.1]
 EOF
 
+mkdir -p ./docker-entrypoint-initdb.d
 cat > ./docker-entrypoint-initdb.d/create.sql <<-EOF
 CREATE DATABASE pdns character set utf8;
 CREATE USER '${MYSQL_USER}'@'localhost' IDENTIFIED BY '${MYSQL_PASS}';
@@ -60,7 +62,12 @@ chmod +x ./git.sh
 echo "* * * * * ${WORKDIR}/git.sh" >> /var/spool/cron/root
 
 docker-compose up -d
-sleep 60
+
+until docker exec db-${NODE_ORDER} mysql -u${MYSQL_USER} -p${MYSQL_PASS} -e "SELECT 1"
+do
+sleep 5
+done
+
 docker exec pdns-$NODE_ORDER pdnsutil add-record lab2.jelastic.team webapp-$NODE_ORDER A $WEB_IP
 
 #docker exec pdns1 pdnsutil delete-rrset lab2.jelastic.team www1 A
