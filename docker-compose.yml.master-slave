@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  mariadb-slave:
+    image: bitnami/mariadb:latest
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - '3306:3306'
+    volumes:
+      - /opt/compose/mariadb_data:/bitnami/mariadb
+#      - /opt/compose/logs/:/opt/bitnami/mariadb/logs/
+    environment:
+      - MARIADB_REPLICATION_MODE=slave
+      - MARIADB_REPLICATION_USER=sst_user
+      - MARIADB_REPLICATION_PASSWORD=replica
+      - MARIADB_MASTER_ROOT_PASSWORD=P@ssw0rd
+      - MARIADB_MASTER_HOST=192.168.3.2
+      - MARIADB_MASTER_PORT_NUMBER=3306
+      - MARIADB_ROOT_USER=root
+      - MARIADB_ROOT_PASSWORD=P@ssw0rd
+    network_mode: host
+
+  pdns-server:
+    image: psitrax/powerdns
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "53:53"
+      - "53:53/udp"
+    command: --api=yes --api-key=apykey --webserver-address=0.0.0.0 --webserver-allow-from=0.0.0.0/0
+    environment:
+      - MYSQL_HOST=192.168.3.2
+      - MYSQL_USER=imperituroard
+      - MYSQL_PASS=imperituroard
+      - PDNS_API_KEY=apykey
+      - PDNS_WEBSERVER_ALLOW_FROM=0.0.0.0/0
+    depends_on:
+      - mariadb-slave
+    network_mode: host
+
+volumes:
+  mariadb_data:
+        driver: local

@@ -1,0 +1,282 @@
+2020-02-18  1:47:10 6 [Warning] Failed to load slave replication state from table mysql.gtid_slave_pos: 1017: Can't find file: './mysql/' (errno: 2 "No such file or directory")
+2020-02-18  1:47:14 0 [Note] WSREP: Read nil XID from storage engines, skipping position init
+2020-02-18  1:47:14 0 [Note] WSREP: wsrep_load(): loading provider library '/opt/bitnami/mariadb/lib/libgalera_smm.so'
+2020-02-18  1:47:14 0 [Note] WSREP: wsrep_load(): Galera 3.28(r0) by Codership Oy <info@codership.com> loaded successfully.
+2020-02-18  1:47:14 0 [Note] WSREP: CRC-32C: using hardware acceleration.
+2020-02-18  1:47:14 0 [Warning] WSREP: Could not open state file for reading: '/bitnami/mariadb/data//grastate.dat'
+2020-02-18  1:47:14 0 [Note] WSREP: Found saved state: 00000000-0000-0000-0000-000000000000:-1, safe_to_bootstrap: 1
+2020-02-18  1:47:14 0 [Note] WSREP: Passing config to GCS: base_dir = /bitnami/mariadb/data/; base_host = 192.168.2.2; base_port = 4567; cert.log_conflicts = no; cert.optimistic_pa = yes; debug = no; evs.auto_evict = 0; evs.delay_margin = PT1S; evs.delayed_keep_period = PT30S; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /bitnami/mariadb/data/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = /bitnami/mariadb/data//galera.cache; gcache.page_size = 128M; gcache.recover = no; gcache.size = 128M; gcomm.thread_prio = ; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.segment = 0; gmcast.version = 0; pc.anno
+2020-02-18  1:47:14 0 [Note] WSREP: GCache history reset: 00000000-0000-0000-0000-000000000000:0 -> 00000000-0000-0000-0000-000000000000:-1
+2020-02-18  1:47:14 0 [Note] WSREP: Assign initial position for certification: -1, protocol version: -1
+2020-02-18  1:47:14 0 [Note] WSREP: wsrep_sst_grab()
+2020-02-18  1:47:14 0 [Note] WSREP: Start replication
+2020-02-18  1:47:14 0 [Note] WSREP: Setting initial position to 00000000-0000-0000-0000-000000000000:-1
+2020-02-18  1:47:14 0 [Note] WSREP: protonet asio version 0
+2020-02-18  1:47:14 0 [Note] WSREP: Using CRC-32C for message checksums.
+2020-02-18  1:47:14 0 [Note] WSREP: backend: asio
+2020-02-18  1:47:14 0 [Note] WSREP: gcomm thread scheduling priority set to other:0 
+2020-02-18  1:47:14 0 [Warning] WSREP: access file(/bitnami/mariadb/data//gvwstate.dat) failed(No such file or directory)
+2020-02-18  1:47:14 0 [Note] WSREP: restore pc from disk failed
+2020-02-18  1:47:14 0 [Note] WSREP: GMCast version 0
+2020-02-18  1:47:14 0 [Note] WSREP: (96993961, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+2020-02-18  1:47:14 0 [Note] WSREP: (96993961, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+2020-02-18  1:47:14 0 [Note] WSREP: EVS version 0
+2020-02-18  1:47:14 0 [Note] WSREP: gcomm: connecting to group 'powerdns_cluster', peer ''
+2020-02-18  1:47:14 0 [Note] WSREP: start_prim is enabled, turn off pc_recovery
+2020-02-18  1:47:14 0 [Note] WSREP: Node 96993961 state prim
+2020-02-18  1:47:14 0 [Note] WSREP: view(view_id(PRIM,96993961,1) memb {
+	96993961,0
+} joined {
+} left {
+} partitioned {
+})
+2020-02-18  1:47:14 0 [Note] WSREP: save pc into disk
+2020-02-18  1:47:14 0 [Note] WSREP: gcomm: connected
+2020-02-18  1:47:14 0 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+2020-02-18  1:47:14 0 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+2020-02-18  1:47:14 0 [Note] WSREP: Opened channel 'powerdns_cluster'
+2020-02-18  1:47:14 0 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 0, memb_num = 1
+2020-02-18  1:47:14 0 [Note] WSREP: Waiting for SST to complete.
+2020-02-18  1:47:14 0 [Note] WSREP: Starting new group from scratch: 9699af49-51f0-11ea-8f2f-dab53258c49a
+2020-02-18  1:47:14 0 [Note] WSREP: STATE_EXCHANGE: sent state UUID: 9699b0d1-51f0-11ea-a2e6-cbaf9e77d487
+2020-02-18  1:47:14 0 [Note] WSREP: STATE EXCHANGE: sent state msg: 9699b0d1-51f0-11ea-a2e6-cbaf9e77d487
+2020-02-18  1:47:14 0 [Note] WSREP: STATE EXCHANGE: got state msg: 9699b0d1-51f0-11ea-a2e6-cbaf9e77d487 from 0 (hn01-waw1.lab2.jelastic.team)
+2020-02-18  1:47:14 0 [Note] WSREP: Quorum results:
+	version    = 6,
+	component  = PRIMARY,
+	conf_id    = 0,
+	members    = 1/1 (joined/total),
+	act_id     = 0,
+	last_appl. = -1,
+	protocols  = 0/9/3 (gcs/repl/appl),
+	group UUID = 9699af49-51f0-11ea-8f2f-dab53258c49a
+2020-02-18  1:47:14 0 [Note] WSREP: Flow-control interval: [16, 16]
+2020-02-18  1:47:14 0 [Note] WSREP: Trying to continue unpaused monitor
+2020-02-18  1:47:14 0 [Note] WSREP: Restored state OPEN -> JOINED (0)
+2020-02-18  1:47:14 0 [Note] WSREP: Member 0.0 (hn01-waw1.lab2.jelastic.team) synced with group.
+2020-02-18  1:47:14 0 [Note] WSREP: Shifting JOINED -> SYNCED (TO: 0)
+2020-02-18  1:47:14 2 [Note] WSREP: New cluster view: global state: 9699af49-51f0-11ea-8f2f-dab53258c49a:0, view# 1: Primary, number of nodes: 1, my index: 0, protocol version 3
+2020-02-18  1:47:14 0 [Note] WSREP: SST complete, seqno: 0
+2020-02-18  1:47:14 0 [Note] InnoDB: Using Linux native AIO
+2020-02-18  1:47:14 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2020-02-18  1:47:14 0 [Note] InnoDB: Uses event mutexes
+2020-02-18  1:47:14 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-02-18  1:47:14 0 [Note] InnoDB: Number of pools: 1
+2020-02-18  1:47:14 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-02-18  1:47:14 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2020-02-18  1:47:14 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-02-18  1:47:14 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2020-02-18  1:47:14 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-02-18  1:47:14 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-02-18  1:47:14 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-02-18  1:47:14 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2020-02-18  1:47:14 0 [Note] InnoDB: Waiting for purge to start
+2020-02-18  1:47:14 0 [Note] InnoDB: 10.3.22 started; log sequence number 1625616; transaction id 21
+2020-02-18  1:47:14 0 [Note] InnoDB: Loading buffer pool(s) from /bitnami/mariadb/data/ib_buffer_pool
+2020-02-18  1:47:14 0 [Note] InnoDB: Buffer pool(s) load completed at 200218  1:47:14
+2020-02-18  1:47:14 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-02-18  1:47:15 0 [Note] Server socket created on IP: '0.0.0.0'.
+2020-02-18  1:47:15 0 [Warning] 'user' entry 'root@hn01-waw1.lab2.jelastic.team' ignored in --skip-name-resolve mode.
+2020-02-18  1:47:15 0 [Warning] 'user' entry '@hn01-waw1.lab2.jelastic.team' ignored in --skip-name-resolve mode.
+2020-02-18  1:47:15 0 [Warning] 'proxies_priv' entry '@% root@hn01-waw1.lab2.jelastic.team' ignored in --skip-name-resolve mode.
+2020-02-18  1:47:15 2 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2020-02-18  1:47:15 2 [Note] WSREP: REPL Protocols: 9 (4, 2)
+2020-02-18  1:47:15 2 [Note] WSREP: Assign initial position for certification: 0, protocol version: 4
+2020-02-18  1:47:15 0 [Note] WSREP: Service thread queue flushed.
+2020-02-18  1:47:15 0 [Note] Reading of all Master_info entries succeeded
+2020-02-18  1:47:15 0 [Note] Added new Master_info '' to hash table
+2020-02-18  1:47:15 0 [Note] /opt/bitnami/mariadb/sbin/mysqld: ready for connections.
+Version: '10.3.22-MariaDB-log'  socket: '/opt/bitnami/mariadb/tmp/mysql.sock'  port: 3306  Source distribution
+2020-02-18  1:47:15 2 [Note] WSREP: GCache history reset: 00000000-0000-0000-0000-000000000000:0 -> 9699af49-51f0-11ea-8f2f-dab53258c49a:0
+2020-02-18  1:47:15 2 [Note] WSREP: Synchronized with group, ready for connections
+2020-02-18  1:47:15 2 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2020-02-18  1:47:15 15 [Warning] 'proxies_priv' entry '@% root@hn01-waw1.lab2.jelastic.team' ignored in --skip-name-resolve mode.
+2020-02-18  1:47:15 18 [Warning] 'proxies_priv' entry '@% root@hn01-waw1.lab2.jelastic.team' ignored in --skip-name-resolve mode.
+2020-02-18  1:47:15 19 [Warning] 'proxies_priv' entry '@% root@hn01-waw1.lab2.jelastic.team' ignored in --skip-name-resolve mode.
+2020-02-18  1:47:15 20 [Warning] 'proxies_priv' entry '@% root@hn01-waw1.lab2.jelastic.team' ignored in --skip-name-resolve mode.
+2020-02-18  1:47:15 0 [Note] /opt/bitnami/mariadb/sbin/mysqld (initiated by: unknown): Normal shutdown
+2020-02-18  1:47:15 0 [Note] WSREP: Stop replication
+2020-02-18  1:47:15 0 [Note] WSREP: Closing send monitor...
+2020-02-18  1:47:15 0 [Note] WSREP: Closed send monitor.
+2020-02-18  1:47:15 0 [Note] WSREP: gcomm: terminating thread
+2020-02-18  1:47:15 0 [Note] WSREP: gcomm: joining thread
+2020-02-18  1:47:15 0 [Note] WSREP: gcomm: closing backend
+2020-02-18  1:47:15 0 [Note] WSREP: view((empty))
+2020-02-18  1:47:15 0 [Note] WSREP: gcomm: closed
+2020-02-18  1:47:15 0 [Note] WSREP: Received self-leave message.
+2020-02-18  1:47:15 0 [Note] WSREP: Flow-control interval: [0, 0]
+2020-02-18  1:47:15 0 [Note] WSREP: Trying to continue unpaused monitor
+2020-02-18  1:47:15 0 [Note] WSREP: Received SELF-LEAVE. Closing connection.
+2020-02-18  1:47:15 0 [Note] WSREP: Shifting SYNCED -> CLOSED (TO: 10)
+2020-02-18  1:47:15 0 [Note] WSREP: RECV thread exiting 0: Success
+2020-02-18  1:47:15 2 [Note] WSREP: New cluster view: global state: 9699af49-51f0-11ea-8f2f-dab53258c49a:10, view# -1: non-Primary, number of nodes: 0, my index: -1, protocol version 3
+2020-02-18  1:47:15 2 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2020-02-18  1:47:15 0 [Note] WSREP: recv_thread() joined.
+2020-02-18  1:47:15 0 [Note] WSREP: Closing replication queue.
+2020-02-18  1:47:15 0 [Note] WSREP: Closing slave action queue.
+2020-02-18  1:47:15 2 [Note] WSREP: applier thread exiting (code:0)
+2020-02-18  1:47:15 9 [Note] WSREP: applier thread exiting (code:6)
+2020-02-18  1:47:15 10 [Note] WSREP: applier thread exiting (code:6)
+2020-02-18  1:47:15 11 [Note] WSREP: applier thread exiting (code:6)
+2020-02-18  1:47:17 1 [Note] WSREP: rollbacker thread exiting
+2020-02-18  1:47:17 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-02-18  1:47:17 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-02-18  1:47:17 0 [Note] WSREP: dtor state: CLOSED
+2020-02-18  1:47:17 0 [Note] WSREP: mon: entered 10 oooe fraction 0 oool fraction 0
+2020-02-18  1:47:17 0 [Note] WSREP: mon: entered 10 oooe fraction 0 oool fraction 0
+2020-02-18  1:47:17 0 [Note] WSREP: mon: entered 13 oooe fraction 0 oool fraction 0
+2020-02-18  1:47:17 0 [Note] WSREP: cert index usage at exit 0
+2020-02-18  1:47:17 0 [Note] WSREP: cert trx map usage at exit 10
+2020-02-18  1:47:17 0 [Note] WSREP: deps set usage at exit 0
+2020-02-18  1:47:17 0 [Note] WSREP: avg deps dist 1
+2020-02-18  1:47:17 0 [Note] WSREP: avg cert interval 0
+2020-02-18  1:47:17 0 [Note] WSREP: cert index size 1
+2020-02-18  1:47:17 0 [Note] WSREP: Service thread queue flushed.
+2020-02-18  1:47:17 0 [Note] WSREP: wsdb trx map usage 0 conn query map usage 0
+2020-02-18  1:47:17 0 [Note] WSREP: MemPool(LocalTrxHandle): hit ratio: 0, misses: 10, in use: 0, in pool: 10
+2020-02-18  1:47:17 0 [Note] WSREP: MemPool(SlaveTrxHandle): hit ratio: 0, misses: 0, in use: 0, in pool: 0
+2020-02-18  1:47:17 0 [Note] WSREP: Shifting CLOSED -> DESTROYED (TO: 10)
+2020-02-18  1:47:17 0 [Note] WSREP: Flushing memory map to disk...
+2020-02-18  1:47:17 0 [Note] InnoDB: Starting shutdown...
+2020-02-18  1:47:17 0 [Note] InnoDB: Dumping buffer pool(s) to /bitnami/mariadb/data/ib_buffer_pool
+2020-02-18  1:47:17 0 [Note] InnoDB: Buffer pool(s) dump completed at 200218  1:47:17
+2020-02-18  1:47:18 0 [Note] InnoDB: Shutdown completed; log sequence number 1637250; transaction id 22
+2020-02-18  1:47:18 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-02-18  1:47:18 0 [Note] /opt/bitnami/mariadb/sbin/mysqld: Shutdown complete
+
+2020-02-18  1:47:19 0 [Note] WSREP: Read nil XID from storage engines, skipping position init
+2020-02-18  1:47:19 0 [Note] WSREP: wsrep_load(): loading provider library '/opt/bitnami/mariadb/lib/libgalera_smm.so'
+2020-02-18  1:47:19 0 [Note] WSREP: wsrep_load(): Galera 3.28(r0) by Codership Oy <info@codership.com> loaded successfully.
+2020-02-18  1:47:19 0 [Note] WSREP: CRC-32C: using hardware acceleration.
+2020-02-18  1:47:19 0 [Note] WSREP: Found saved state: 9699af49-51f0-11ea-8f2f-dab53258c49a:10, safe_to_bootstrap: 1
+2020-02-18  1:47:19 0 [Note] WSREP: Passing config to GCS: base_dir = /bitnami/mariadb/data/; base_host = 192.168.2.2; base_port = 4567; cert.log_conflicts = no; cert.optimistic_pa = yes; debug = no; evs.auto_evict = 0; evs.delay_margin = PT1S; evs.delayed_keep_period = PT30S; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /bitnami/mariadb/data/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = /bitnami/mariadb/data//galera.cache; gcache.page_size = 128M; gcache.recover = no; gcache.size = 128M; gcomm.thread_prio = ; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.segment = 0; gmcast.version = 0; pc.anno
+2020-02-18  1:47:19 0 [Note] WSREP: GCache history reset: 9699af49-51f0-11ea-8f2f-dab53258c49a:0 -> 9699af49-51f0-11ea-8f2f-dab53258c49a:10
+2020-02-18  1:47:19 0 [Note] WSREP: Assign initial position for certification: 10, protocol version: -1
+2020-02-18  1:47:19 0 [Note] WSREP: wsrep_sst_grab()
+2020-02-18  1:47:19 0 [Note] WSREP: Start replication
+2020-02-18  1:47:19 0 [Note] WSREP: Setting initial position to 9699af49-51f0-11ea-8f2f-dab53258c49a:10
+2020-02-18  1:47:19 0 [Note] WSREP: protonet asio version 0
+2020-02-18  1:47:19 0 [Note] WSREP: Using CRC-32C for message checksums.
+2020-02-18  1:47:19 0 [Note] WSREP: backend: asio
+2020-02-18  1:47:19 0 [Note] WSREP: gcomm thread scheduling priority set to other:0 
+2020-02-18  1:47:19 0 [Warning] WSREP: access file(/bitnami/mariadb/data//gvwstate.dat) failed(No such file or directory)
+2020-02-18  1:47:19 0 [Note] WSREP: restore pc from disk failed
+2020-02-18  1:47:19 0 [Note] WSREP: GMCast version 0
+2020-02-18  1:47:19 0 [Note] WSREP: (991bda29, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+2020-02-18  1:47:19 0 [Note] WSREP: (991bda29, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+2020-02-18  1:47:19 0 [Note] WSREP: EVS version 0
+2020-02-18  1:47:19 0 [Note] WSREP: gcomm: connecting to group 'powerdns_cluster', peer ''
+2020-02-18  1:47:19 0 [Note] WSREP: start_prim is enabled, turn off pc_recovery
+2020-02-18  1:47:19 0 [Note] WSREP: Node 991bda29 state prim
+2020-02-18  1:47:19 0 [Note] WSREP: view(view_id(PRIM,991bda29,1) memb {
+	991bda29,0
+} joined {
+} left {
+} partitioned {
+})
+2020-02-18  1:47:19 0 [Note] WSREP: save pc into disk
+2020-02-18  1:47:19 0 [Note] WSREP: gcomm: connected
+2020-02-18  1:47:19 0 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+2020-02-18  1:47:19 0 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+2020-02-18  1:47:19 0 [Note] WSREP: Opened channel 'powerdns_cluster'
+2020-02-18  1:47:19 0 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 0, memb_num = 1
+2020-02-18  1:47:19 0 [Note] WSREP: STATE_EXCHANGE: sent state UUID: 991d06a3-51f0-11ea-ad53-3b0ec0dca1d1
+2020-02-18  1:47:19 0 [Note] WSREP: Waiting for SST to complete.
+2020-02-18  1:47:19 0 [Note] WSREP: STATE EXCHANGE: sent state msg: 991d06a3-51f0-11ea-ad53-3b0ec0dca1d1
+2020-02-18  1:47:19 0 [Note] WSREP: STATE EXCHANGE: got state msg: 991d06a3-51f0-11ea-ad53-3b0ec0dca1d1 from 0 (hn01-waw1.lab2.jelastic.team)
+2020-02-18  1:47:19 0 [Note] WSREP: Quorum results:
+	version    = 6,
+	component  = PRIMARY,
+	conf_id    = 0,
+	members    = 1/1 (joined/total),
+	act_id     = 10,
+	last_appl. = -1,
+	protocols  = 0/9/3 (gcs/repl/appl),
+	group UUID = 9699af49-51f0-11ea-8f2f-dab53258c49a
+2020-02-18  1:47:19 0 [Note] WSREP: Flow-control interval: [16, 16]
+2020-02-18  1:47:19 0 [Note] WSREP: Trying to continue unpaused monitor
+2020-02-18  1:47:19 0 [Note] WSREP: Restored state OPEN -> JOINED (10)
+2020-02-18  1:47:19 0 [Note] WSREP: Member 0.0 (hn01-waw1.lab2.jelastic.team) synced with group.
+2020-02-18  1:47:19 0 [Note] WSREP: Shifting JOINED -> SYNCED (TO: 10)
+2020-02-18  1:47:19 2 [Note] WSREP: New cluster view: global state: 9699af49-51f0-11ea-8f2f-dab53258c49a:10, view# 1: Primary, number of nodes: 1, my index: 0, protocol version 3
+2020-02-18  1:47:19 0 [Note] WSREP: SST complete, seqno: 10
+2020-02-18  1:47:19 0 [Note] InnoDB: Using Linux native AIO
+2020-02-18  1:47:19 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2020-02-18  1:47:19 0 [Note] InnoDB: Uses event mutexes
+2020-02-18  1:47:19 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-02-18  1:47:19 0 [Note] InnoDB: Number of pools: 1
+2020-02-18  1:47:19 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-02-18  1:47:19 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2020-02-18  1:47:19 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-02-18  1:47:19 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2020-02-18  1:47:19 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-02-18  1:47:19 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-02-18  1:47:19 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-02-18  1:47:19 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2020-02-18  1:47:19 0 [Note] InnoDB: 10.3.22 started; log sequence number 1637250; transaction id 21
+2020-02-18  1:47:19 0 [Note] InnoDB: Loading buffer pool(s) from /bitnami/mariadb/data/ib_buffer_pool
+2020-02-18  1:47:19 0 [Note] InnoDB: Buffer pool(s) load completed at 200218  1:47:19
+2020-02-18  1:47:19 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-02-18  1:47:19 0 [Note] Server socket created on IP: '0.0.0.0'.
+2020-02-18  1:47:19 0 [Warning] 'proxies_priv' entry '@% root@hn01-waw1.lab2.jelastic.team' ignored in --skip-name-resolve mode.
+2020-02-18  1:47:19 0 [Note] Reading of all Master_info entries succeeded
+2020-02-18  1:47:19 0 [Note] Added new Master_info '' to hash table
+2020-02-18  1:47:19 0 [Note] /opt/bitnami/mariadb/sbin/mysqld: ready for connections.
+Version: '10.3.22-MariaDB-log'  socket: '/opt/bitnami/mariadb/tmp/mysql.sock'  port: 3306  Source distribution
+2020-02-18  1:47:19 2 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2020-02-18  1:47:19 2 [Note] WSREP: REPL Protocols: 9 (4, 2)
+2020-02-18  1:47:19 2 [Note] WSREP: Assign initial position for certification: 10, protocol version: 4
+2020-02-18  1:47:19 0 [Note] WSREP: Service thread queue flushed.
+2020-02-18  1:47:19 2 [Note] WSREP: GCache history reset: 9699af49-51f0-11ea-8f2f-dab53258c49a:0 -> 9699af49-51f0-11ea-8f2f-dab53258c49a:10
+2020-02-18  1:47:19 2 [Note] WSREP: Synchronized with group, ready for connections
+2020-02-18  1:47:19 2 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2020-02-18  1:48:31 0 [Note] /opt/bitnami/mariadb/sbin/mysqld (initiated by: unknown): Normal shutdown
+2020-02-18  1:48:31 0 [Note] WSREP: Stop replication
+2020-02-18  1:48:31 0 [Note] WSREP: Closing send monitor...
+2020-02-18  1:48:31 0 [Note] WSREP: Closed send monitor.
+2020-02-18  1:48:31 0 [Note] WSREP: gcomm: terminating thread
+2020-02-18  1:48:31 0 [Note] WSREP: gcomm: joining thread
+2020-02-18  1:48:31 0 [Note] WSREP: gcomm: closing backend
+2020-02-18  1:48:31 0 [Note] WSREP: view((empty))
+2020-02-18  1:48:31 0 [Note] WSREP: gcomm: closed
+2020-02-18  1:48:31 0 [Note] WSREP: Received self-leave message.
+2020-02-18  1:48:31 0 [Note] WSREP: Flow-control interval: [0, 0]
+2020-02-18  1:48:31 0 [Note] WSREP: Trying to continue unpaused monitor
+2020-02-18  1:48:31 0 [Note] WSREP: Received SELF-LEAVE. Closing connection.
+2020-02-18  1:48:31 0 [Note] WSREP: Shifting SYNCED -> CLOSED (TO: 10)
+2020-02-18  1:48:31 0 [Note] WSREP: RECV thread exiting 0: Success
+2020-02-18  1:48:31 0 [Note] WSREP: recv_thread() joined.
+2020-02-18  1:48:31 0 [Note] WSREP: Closing replication queue.
+2020-02-18  1:48:31 0 [Note] WSREP: Closing slave action queue.
+2020-02-18  1:48:31 2 [Note] WSREP: New cluster view: global state: 9699af49-51f0-11ea-8f2f-dab53258c49a:10, view# -1: non-Primary, number of nodes: 0, my index: -1, protocol version 3
+2020-02-18  1:48:31 2 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+2020-02-18  1:48:31 2 [Note] WSREP: applier thread exiting (code:0)
+2020-02-18  1:48:31 10 [Note] WSREP: applier thread exiting (code:6)
+2020-02-18  1:48:31 9 [Note] WSREP: applier thread exiting (code:6)
+2020-02-18  1:48:31 11 [Note] WSREP: applier thread exiting (code:6)
+2020-02-18  1:48:33 1 [Note] WSREP: rollbacker thread exiting
+2020-02-18  1:48:33 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-02-18  1:48:33 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-02-18  1:48:33 0 [Note] WSREP: dtor state: CLOSED
+2020-02-18  1:48:33 0 [Note] WSREP: apply mon: entered 0
+2020-02-18  1:48:33 0 [Note] WSREP: apply mon: entered 0
+2020-02-18  1:48:33 0 [Note] WSREP: mon: entered 3 oooe fraction 0 oool fraction 0
+2020-02-18  1:48:33 0 [Note] WSREP: cert index usage at exit 0
+2020-02-18  1:48:33 0 [Note] WSREP: cert trx map usage at exit 0
+2020-02-18  1:48:33 0 [Note] WSREP: deps set usage at exit 0
+2020-02-18  1:48:33 0 [Note] WSREP: avg deps dist 0
+2020-02-18  1:48:33 0 [Note] WSREP: avg cert interval 0
+2020-02-18  1:48:33 0 [Note] WSREP: cert index size 0
+2020-02-18  1:48:33 0 [Note] WSREP: Service thread queue flushed.
+2020-02-18  1:48:33 0 [Note] WSREP: wsdb trx map usage 0 conn query map usage 0
+2020-02-18  1:48:33 0 [Note] WSREP: MemPool(LocalTrxHandle): hit ratio: 0, misses: 0, in use: 0, in pool: 0
+2020-02-18  1:48:33 0 [Note] WSREP: MemPool(SlaveTrxHandle): hit ratio: 0, misses: 0, in use: 0, in pool: 0
+2020-02-18  1:48:33 0 [Note] WSREP: Shifting CLOSED -> DESTROYED (TO: 10)
+2020-02-18  1:48:33 0 [Note] WSREP: Flushing memory map to disk...
+2020-02-18  1:48:33 0 [Note] InnoDB: Starting shutdown...
+2020-02-18  1:48:33 0 [Note] InnoDB: Dumping buffer pool(s) to /bitnami/mariadb/data/ib_buffer_pool
+2020-02-18  1:48:33 0 [Note] InnoDB: Buffer pool(s) dump completed at 200218  1:48:33
+2020-02-18  1:48:34 0 [Note] InnoDB: Shutdown completed; log sequence number 1638324; transaction id 22
+2020-02-18  1:48:34 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-02-18  1:48:34 0 [Note] /opt/bitnami/mariadb/sbin/mysqld: Shutdown complete
+

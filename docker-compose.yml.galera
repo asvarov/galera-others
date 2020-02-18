@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  mariadb-galera-1:
+    image: bitnami/mariadb-galera:10.3.22
+    ports:
+      - '3306:3306'
+      - '4444:4444'
+      - '4567:4567'
+      - '4568:4568'
+    volumes:
+      - /mariadb_galera_data:/bitnami/mariadb
+#      - /opt/compose/my.cnf:/opt/bitnami/mariadb/conf/my.cnf:ro
+      - /opt/compose/logs/:/opt/bitnami/mariadb/logs/
+    environment:
+      - MARIADB_ROOT_PASSWORD=P@ssw0rd
+      - MARIADB_GALERA_CLUSTER_NAME=powerdns_cluster
+      - MARIADB_GALERA_MARIABACKUP_USER=sst_user
+      - MARIADB_GALERA_MARIABACKUP_PASSWORD=replica
+      - MARIADB_GALERA_CLUSTER_ADDRESS=gcomm://192.168.3.3
+    network_mode: host
+volumes:
+  mariadb_galera_data:
+    driver: local
