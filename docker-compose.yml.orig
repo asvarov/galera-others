@@ -2,7 +2,6 @@ version: '3'
 services:
   mariadb:
     image: mariadb:10.1
-    restart: always
     container_name: db-${NODE_ORDER}
     hostname: db-${NODE_ORDER}.lab2.jelastic.team
     cap_add:
@@ -17,19 +16,13 @@ services:
       - ./logs/:/opt/bitnami/mariadb/logs/
       - ./mysql.conf.d/:/etc/mysql/conf.d/
       - ./data/:/var/lib/mysql/
-    healthcheck:
-      test: ["CMD-SHELL", "curl --fail http://${MYSQL_ROOT_PASSWORD}:3306"]
-      interval: 15s
-      timeout: 10s
-      retries: 20
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    command: --wsrep_node_address=${GALERA2_IP}
+    command: --wsrep_node_address=${GALERA_IP}
     network_mode: host
 
   pdns-server:
     image: psitrax/powerdns
-    restart: always
     container_name: pdns-${NODE_ORDER}
     hostname: pdns-${NODE_ORDER}.lab2.jelastic.team
     cap_add:
