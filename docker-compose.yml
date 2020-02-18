@@ -1,24 +1,37 @@
-version: '2'
-
+version: '3'
 services:
-  mariadb-galera-1:
-    image: bitnami/mariadb-galera:10.3.22
+  mariadb-2:
+    image: mariadb:10.1
+    cap_add:
+      - NET_ADMIN
     ports:
       - '3306:3306'
       - '4444:4444'
       - '4567:4567'
+      - '4567:4567/udp'
       - '4568:4568'
     volumes:
-      - /mariadb_galera_data:/bitnami/mariadb
-#      - /opt/compose/my.cnf:/opt/bitnami/mariadb/conf/my.cnf:ro
       - /opt/compose/logs/:/opt/bitnami/mariadb/logs/
+      - /opt/compose/mysql.conf.d/:/etc/mysql/conf.d/
+      - /opt/compose/data/:/var/lib/mysql/
     environment:
-      - MARIADB_ROOT_PASSWORD=P@ssw0rd
-      - MARIADB_GALERA_CLUSTER_NAME=powerdns_cluster
-      - MARIADB_GALERA_MARIABACKUP_USER=sst_user
-      - MARIADB_GALERA_MARIABACKUP_PASSWORD=replica
-      - MARIADB_GALERA_CLUSTER_ADDRESS=gcomm://192.168.3.3
+      - MYSQL_ROOT_PASSWORD=P@ssw0rd
+    command: --wsrep_node_address=192.168.2.2
     network_mode: host
-volumes:
-  mariadb_galera_data:
-    driver: local
+
+  pdns-server-2:
+    image: psitrax/powerdns
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "53:53"
+      - "53:53/udp"
+    command: --api=yes --api-key=apykey
+    environment:
+      - MYSQL_HOST=192.168.3.2
+      - MYSQL_USER=imperituroard
+      - MYSQL_PASS=imperituroard
+    depends_on:
+      - mariadb-2
+    network_mode: host
+
