@@ -61,7 +61,6 @@ echo "* * * * * ${WORKDIR}/git.sh" >> /var/spool/cron/root
 
 docker-compose up -d
 sleep 60
-docker exec pdns-$NODE_ORDER pdnsutil create-zone lab2.jelastic.team
 docker exec pdns-$NODE_ORDER pdnsutil add-record lab2.jelastic.team webapp-$NODE_ORDER A $WEB_IP
 
 #docker exec pdns1 pdnsutil delete-rrset lab2.jelastic.team www1 A

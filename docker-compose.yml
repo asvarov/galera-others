@@ -18,9 +18,9 @@ services:
       - ./mysql.conf.d/:/etc/mysql/conf.d/
       - ./data/:/var/lib/mysql/
     healthcheck:
-      test: ["CMD-SHELL", "curl --fail http://${MYSQL_ROOT_PASSWORD}:3306"]
-      interval: 15s
-      timeout: 10s
+      test: ["CMD-SHELL", "curl --fail http://${MYSQL_HOST}:3306"]
+      interval: 20s
+      timeout: 20s
       retries: 20
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
